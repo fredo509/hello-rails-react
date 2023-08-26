@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
-import Message from './Message';
+import Greeting from './greeting';
 
 const App = () => {
   return (
