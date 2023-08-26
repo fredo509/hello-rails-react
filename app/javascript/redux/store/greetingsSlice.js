@@ -10,9 +10,11 @@ const url = 'http://localhost:3000/api/v1/greetings';
 
 
 export const getgreetings = createAsyncThunk('greetings/fetchgreetings', async () => {
-    const response = await fetch(`${url}`);
+    const response = await fetch(`${url}`,{
+        mode: 'no-cors'
+    });
     const data = await response.json();
-    return data;
+    return data.text
 });
 
 const greetingsSlice = createSlice({
